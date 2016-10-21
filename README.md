@@ -58,4 +58,4 @@ best_label.csv:The simulated label distribution that is most consistent with exp
 best_fluxes.csv:The flux distribution that is most consistent with experimental measurments
 confidence.csv:The lower and upper limits of the confidence intervals
 
-## Publication
+## Publications
