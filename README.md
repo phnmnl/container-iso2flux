@@ -56,3 +56,4 @@ best_fluxes.csv:The flux distribution that is most consistent with experimental 
 confidence.csv:The lower and upper limits of the confidence intervals
 
 ## Publications
+- Carles Foguet, Pedro de Atauri, Vitaly A. Selivanov, Marta Cascante, Iso2Flux: A new software for 13C fluxomics developed in the framework of PhenoMeNal
