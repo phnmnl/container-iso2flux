@@ -1,7 +1,7 @@
 # Iso2Flux
 Version: 0.2
 
-## Short description
+## Short Description
 
 Open source software for steady state 13C flux analysis
 
@@ -57,3 +57,5 @@ unconstrained_fluxes.csv:Flux variability analysis before tracer data is integra
 best_label.csv:The simulated label distribution that is most consistent with experimental measurements
 best_fluxes.csv:The flux distribution that is most consistent with experimental measurments
 confidence.csv:The lower and upper limits of the confidence intervals
+
+## Publication
