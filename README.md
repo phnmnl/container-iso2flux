@@ -39,9 +39,6 @@ Iso2Flux is a Python-based flux analysis software that allows to perform 13C Met
 
 - https://github.com/cfoguet/iso2flux
 
-## Installation 
-
-
 ## Usage Instructions
 Iso2flux takes the following inputs:
 experimental_data_file= Name of the processed Metabolights file containing isotopologues distribution.
