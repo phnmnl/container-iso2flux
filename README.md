@@ -11,8 +11,22 @@ Iso2Flux is a Python-based flux analysis software that allows to perform 13C Met
 
 ## Key features
 
-- Constraint-based modelling
+- Constraint-Based Modelling
 - 13C Metabolic Flux Analysis
+
+##Functionality
+
+- Post-processing
+- Statistical Analysis
+- Workflows 
+
+##Approaches
+
+- Isotopic Labelling Analysis / 13C
+
+##Instrument Data Types
+
+- MS
 
 ## Screenshots
 
