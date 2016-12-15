@@ -5,7 +5,7 @@
 <command><![CDATA[
 echo 'Working directory is '\$PWD;
 #if str( $tracing_model ) != None:
-#set $tracing_model_wext = str( $tracing_model ) + '.xlsx'
+#set $tracing_model_wext = str( $tracing_model ) 
 ln -s "$tracing_model" "$tracing_model_wext";
 #end if
 run_iso2flux.py -e "$tracing_data"
