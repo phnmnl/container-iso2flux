@@ -15,4 +15,7 @@ RUN apt-get -y update && apt-get -y install --no-install-recommends git libglpk-
     apt-get install -y --no-install-recommends python python-dev gcc && \
     apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+ADD runTest1.sh /usr/local/bin/runTest1.sh
+RUN chmod a+x /usr/local/bin/runTest1.sh
+
 ENTRYPOINT ["run_iso2flux.py"]
