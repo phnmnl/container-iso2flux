@@ -1,7 +1,8 @@
-<tool id="iso2flux" name="iso2flux" version="0.1.0">
+<tool id="iso2flux" name="iso2flux" version="0.2">
 <stdio>
 <exit_code range="1:" />
 </stdio>
+<description>13C Metabolic Flux Analysis on a sub-network of a large scale model.</description>
 <command><![CDATA[
 echo 'Working directory is '\$PWD;
 run_iso2flux.py -e "$tracing_data"
