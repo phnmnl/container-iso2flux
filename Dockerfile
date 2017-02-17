@@ -2,10 +2,10 @@ FROM ubuntu:16.04
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 LABEL software.version="0.2"
-LABEL version="0.2"
+LABEL version="1.0"
 LABEL software="iso2flux"
 
-ENV ISO2FLUX_REVISION "5b6b550a7cb4cd40cc557f779dc76ec143c6bb84"
+ENV ISO2FLUX_REVISION "68e669c796789017898597889c36d7e362e96b0a"
 
 RUN apt-get -y update && apt-get -y install --no-install-recommends git libglpk-dev \
                       libxml2-dev libxslt1-dev python-dev python-pip pkg-config zlib1g-dev python-tk libssl-dev && \
