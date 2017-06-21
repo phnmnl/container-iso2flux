@@ -2,8 +2,13 @@ FROM ubuntu:16.04
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 LABEL software.version="0.2"
-LABEL version="1.0"
+LABEL version="1.1"
 LABEL software="iso2flux"
+LABEL description="Uses C13 tracing data for fitting fluxes on metabolic network"
+LABEL website="https://github.com/cfoguet/iso2flux"
+LABEL documentation="https://github.com/cfoguet/iso2flux"
+LABEL license="https://github.com/cfoguet/iso2flux"
+LABEL tags="Metabolomics"
 
 ENV ISO2FLUX_REVISION "1955759812237acb47b01695e052f73b6b45731e"
 
