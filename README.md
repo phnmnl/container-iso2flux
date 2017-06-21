@@ -55,6 +55,10 @@ Iso2Flux is a Python-based flux analysis software that allows to perform 13C Met
 
 ## Installation
 
+Iso2flux is present on all PhenoMeNal Galaxy instances on deployed Cloud Research Environments, under the Fluxomics category in the tool bar to the left of the screen. No installation is needed hence on PhenoMeNal Cloud Research Environments.
+
+For advanced Docker usage:
+
 - Go to the directory where the dockerfile is.
 - Create container from dockerfile:
 
@@ -92,6 +96,8 @@ Iso2Flux generates the follwing outputs:
 | best_label.csv | The simulated label distribution that is most consistent with experimental measurements |
 | best_fluxes.csv | The flux distribution that is most consistent with experimental measurments |
 | confidence.csv | The lower and upper limits of the confidence intervals |
+
+On a PhenoMeNal Cloud Research Environment, go to Fluxomics tool category, and then click on iso2flux, and fill the expected input according to the detail above, then press Run. Additionally, the tool can be used as part of a workflow with Midcor, Ramid and the Escher-Fluxomics tools. On a PhenoMeNal deployed CRE you should find as well a Fluxomics Stationary workflow, which includes Iso2flux. 
 
 Through docker
 
