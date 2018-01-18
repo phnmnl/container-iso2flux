@@ -10,7 +10,7 @@ wget "https://drive.google.com/uc?export=download&id=0B3GjpBpPCNBcbXMtQTJqUUg0Sz
 wget "https://drive.google.com/uc?export=download&id=0B2e3YmwhK4fkbXdTS2FKMFlWYnc" -O simple_model.sbml
 wget "https://drive.google.com/uc?export=download&id=0B2e3YmwhK4fkN21EZF9hSHVTeTQ" -O simple_tracing_model.csv
 
-run_iso2flux.py -e output_midcor.csv -l simple_tracing_model.csv -s simple_model.sbml -c constraints.csv -q
+create_and_solve_iso2flux_model.py -e output_midcor.csv -l simple_tracing_model.csv -s simple_model.sbml -c constraints.csv -q
 
 # check that result file exists.
 BEST_FLUXES=best_fluxes.csv
