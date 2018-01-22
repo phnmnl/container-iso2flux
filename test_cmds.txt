@@ -1,2 +1,2 @@
-which run_iso2flux.py
+which create_and_solve_iso2flux_model.py 
 which runTest1.sh
