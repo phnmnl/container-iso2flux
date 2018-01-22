@@ -10,15 +10,18 @@ wget "https://drive.google.com/uc?export=download&id=0B3GjpBpPCNBcbXMtQTJqUUg0Sz
 wget "https://drive.google.com/uc?export=download&id=0B2e3YmwhK4fkbXdTS2FKMFlWYnc" -O simple_model.sbml
 wget "https://drive.google.com/uc?export=download&id=0B2e3YmwhK4fkN21EZF9hSHVTeTQ" -O simple_tracing_model.csv
 
-run_iso2flux.py -e output_midcor.csv -l simple_tracing_model.csv -s simple_model.sbml -c constraints.csv -q
+create_and_solve_iso2flux_model.py -e output_midcor.csv -l simple_tracing_model.csv -c simple_model.sbml -f constraints.csv
+
+ls -l Iso*
 
 # check that result file exists.
-BEST_FLUXES=best_fluxes.csv
-BEST_LABEL=best_label.csv
-CONSTRAINED_MODEL=constrained_model.xml
+FLUXES=Iso2Flux_fluxes.csv
+LABELS=Iso2Flux_label.csv
+CONSTRAINED_MODEL=Iso2Flux_constrained_model.xml
+#FLUX_INTERVALS=Iso2Flux_flux_interval.csv
 
 
-for f in $BEST_FLUXES $BEST_LABEL $CONSTRAINED_MODEL; do
+for f in $FLUXES $LABELS $CONSTRAINED_MODEL; do
 	if [ ! -f $f ]; then
    		echo "File $f does not exist, failing test."
    		exit 1
