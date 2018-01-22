@@ -74,28 +74,10 @@ docker pull container-registry.phenomenal-h2020.eu/phnmnl/iso2flux
 
 
 ## Usage Instructions
-Iso2flux takes the following inputs:
-
-- experimental_data_file: Name of the processed Metabolights file containing isotopologues distribution.
-- tracing_model: Name of the file(s) describing the label propagation model. Should either be a xlsx file with 2 tabs (one for defining metabolites where label can be simulated and one describing reactions that can propagate label) or 2 CSV files containing the same information (the two files names should be in a string separated by a coma)
-- sbml_model: Name of the SBML file describing the constraint based model that will be used
-- time: Incubation time that will be evaluated
-- factor: Experimental factor or condition that will be evaluated
-- parameters: Name of the CSV file defining additional parameters for Iso2flux (Optional)
-- constraints: Name of the file containing additional constraints for the constraint model (Optional)
-- quick_analysis: Disables the confidence interval analysis (Optional)
- 
-
-Iso2Flux generates the follwing outputs:
-
-- unconstrained_fluxes.csv: Flux variability analysis before tracer data is integrated
-- best_label.csv: The simulated label distribution that is most consistent with experimental measurements
-- best_fluxes.csv: The flux distribution that is most consistent with experimental measurments
-- confidence.csv: The lower and upper limits of the confidence intervals
  
 On a PhenoMeNal Cloud Research Environment, go to Fluxomics tool category, and then click on iso2flux, and fill the expected input according to the detail above, then press Run. Additionally, the tool can be used as part of a workflow with Midcor, Ramid and the Escher-Fluxomics tools. On a PhenoMeNal deployed CRE you should find as well a Fluxomics Stationary workflow, which includes Iso2flux. 
 
-Through docker
+Advanced usage through docker
 
 ```
 docker run -it -v $PWD:/data container-registry.phenomenal-h2020.eu/phnmnl/iso2flux -e /data/tracing_data.csv -l /data/tracing_model.csv -s /data/sbml_model.xml -p parameters.csv -c constraints.csv -q 
