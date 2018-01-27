@@ -10,18 +10,18 @@ run_iso2flux.py -e "$tracing_data"
   -l "$tracing_model"
 #end if
 
--s "$sbml_model"
+-c "$sbml_model"
 
 #if str( $parameters ) != None:
 -p "$parameters"
 #end if
 #if str( $constraints ) != None:
--c "$constraints"
+-f "$constraints"
 #end if
 
 
-#if str( $confidence.compute ) == "no":
--q
+#if str( $confidence.compute ) == "yes":
+-i
 #end if
 ]]></command>
 <!-- -p, -l -s are optional; tracing data, time and experimental factor are required
