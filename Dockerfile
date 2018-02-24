@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
-MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
+LABEL maintainer="PhenoMeNal-H2020 Project (phenomenal-h2020-users@googlegroups.com)"
 LABEL software.version="0.6.1"
-LABEL version="2.0"
+LABEL version="2.1"
 LABEL software="iso2flux"
 LABEL description="Uses C13 tracing data for fitting fluxes on metabolic network"
 LABEL website="https://github.com/cfoguet/iso2flux"
@@ -10,7 +10,7 @@ LABEL documentation="https://github.com/cfoguet/iso2flux"
 LABEL license="https://github.com/cfoguet/iso2flux"
 LABEL tags="Metabolomics"
 
-ENV ISO2FLUX_REVISION "5446ff60b5688628178bed839b415b6bf58b8bfb"
+ENV ISO2FLUX_REVISION "c844a3551d5edcea07a98725f1e59f370b324f07"
 
 RUN apt-get -y update && apt-get -y install --no-install-recommends git libglpk-dev \
                       libxml2-dev libxslt1-dev python-dev python-pip pkg-config zlib1g-dev python-tk libssl-dev && \

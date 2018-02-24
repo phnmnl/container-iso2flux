@@ -4,20 +4,22 @@
 </stdio>
 <description>13C Metabolic Flux Analysis on a sub-network of a large scale model.</description>
 <command><![CDATA[
+ln -s "$sbml_model" model.sbml;
+
 create_and_solve_iso2flux_model.py -e "$tracing_data"
-#if str( $tracing_model ) != None:
+#if $tracing_model
   -l "$tracing_model"
 #end if
 
--c "$sbml_model"
+-c model.sbml
 
-#if str( $parameters ) != None:
--p "$parameters"
-#end if
-#if str( $constraints ) != None:
+#if $constraints
 -f "$constraints"
 #end if
 
+#if $incubation_time
+-u "$incubation_time"
+#end if
 
 #if str( $confidence.compute ) == "yes":
 -i
@@ -30,8 +32,8 @@ create_and_solve_iso2flux_model.py -e "$tracing_data"
     <param type="data" name="tracing_data" label="Tracing data" help="Processed Metabolights file containing isotopologues distribution, output of midcor." format="csv" />
     <param type="data" name="tracing_model" label="Tracing model" help="CSV file describing the label propagation rules." format="csv"/>
     <param type="data" name="sbml_model" label="SBML Model" help="Describes the constraint based model that will be used" format="xml"/>
-    <param type="data" name="parameters" label="Parameters file" help="CSV file defining additional parameters for Iso2flux (Optional)." format="csv" optional="True"/>
     <param type="data" name="constraints" label="Constraints file" help="CSV file containing additional constraints for the optimization model (Optional)" format="csv" optional="True"/>
+    <param type="text" name="incubation_time" label="Incubation time point" help="For multi time-points experiments, set the desired time point for steady state calculation."/>
     <conditional name="confidence">
         <param name="compute" label="Compute confidence intervals" type="select">
             <option value="yes">Yes</option>
