@@ -10,15 +10,16 @@ LABEL documentation="https://github.com/cfoguet/iso2flux"
 LABEL license="https://github.com/cfoguet/iso2flux"
 LABEL tags="Metabolomics"
 
-ENV ISO2FLUX_REVISION "c844a3551d5edcea07a98725f1e59f370b324f07"
+ENV ISO2FLUX_REVISION "dev0.7"
 
 RUN apt-get -y update && apt-get -y install --no-install-recommends git libglpk-dev \
                       libxml2-dev libxslt1-dev python-dev python-pip pkg-config zlib1g-dev python-tk libssl-dev && \
-    pip install --upgrade pip && pip install -U setuptools && \
+    pip install --upgrade pip==9.0.1 && pip install -U setuptools && \
     pip install urllib3[secure] && pip install -e git+https://github.com/cfoguet/iso2flux.git@$ISO2FLUX_REVISION#egg=iso2flux && \
     apt-get purge -y git python-pip python-dev zlib1g-dev pkg-config libpng-dev libxml2-dev libxslt1-dev zlib1g-dev && \
     apt-get install -y --no-install-recommends python python-dev gcc && \
     apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 
 ADD runTest1.sh /usr/local/bin/runTest1.sh
 RUN chmod a+x /usr/local/bin/runTest1.sh
