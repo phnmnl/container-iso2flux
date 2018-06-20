@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 LABEL maintainer="PhenoMeNal-H2020 Project (phenomenal-h2020-users@googlegroups.com)"
-LABEL software.version="0.6.1"
+LABEL software.version="0.7"
 LABEL version="2.1"
 LABEL software="iso2flux"
 LABEL description="Uses C13 tracing data for fitting fluxes on metabolic network"
