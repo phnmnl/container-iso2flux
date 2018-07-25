@@ -7,7 +7,9 @@ Open source software for steady state 13C flux analysis
 
 ## Description
 
-Iso2Flux is a Python-based flux analysis software that allows to perform 13C Metabolic Flux Analysis on a sub-network of a large scale model. Iso2flux uses constraint-based modelling to compute steady state fluxes across a large metabolic network and uses such flxues to predict 13C distribution across a subser of the newtork. Then, given a set of 13C data Iso2flux can iteratively find the steady state flux distributions that are most consistent with such fluxes. 
+Iso2Flux is a Python-based flux analysis software that allows  13C Metabolic Flux Analysis to be performed on a sub-network of a large scale metabolic model. 
+
+Iso2flux uses constraint-based modelling to compute steady state fluxes across a large metabolic network and uses these flxues to predict 13C distribution across a subset of the newtork. Then, given a set of 13C data, Iso2flux can iteratively find the steady state flux distributions that are most consistent with the computed fluxes. 
 
 ## Key features
 
@@ -55,7 +57,7 @@ Iso2Flux is a Python-based flux analysis software that allows to perform 13C Met
 
 ## Installation
 
-Iso2flux is present on all PhenoMeNal Galaxy instances on deployed Cloud Research Environments, under the Fluxomics category in the tool bar to the left of the screen. No installation is needed hence on PhenoMeNal Cloud Research Environments.
+Iso2flux is present on all PhenoMeNal Galaxy instances on deployed Cloud Research Environments, under the Fluxomics category in the tool bar to the left of the screen. No installation is needed on PhenoMeNal Cloud Research Environments.
 
 For advanced Docker usage:
 
@@ -75,7 +77,13 @@ docker pull container-registry.phenomenal-h2020.eu/phnmnl/iso2flux
 
 ## Usage Instructions
  
-On a PhenoMeNal Cloud Research Environment, go to Fluxomics tool category, and then click on iso2flux, and fill the expected input according to the detail above, then press Run. Additionally, the tool can be used as part of a workflow with Midcor, Ramid and the Escher-Fluxomics tools. On a PhenoMeNal deployed CRE you should find as well a Fluxomics Stationary workflow, which includes Iso2flux. 
+On a PhenoMeNal Cloud Research Environment Galaxy instance: 
+- Go to the Fluxomics tool category
+- Click on iso2flux
+- Fill the expected input according to the detail above
+- Press Run. 
+
+Additionally, the tool can be used as part of a workflow with the Midcor, Ramid and Escher-Fluxomics tools. Deployed PhenoMeNal  CREs also include a Fluxiomics Stationary Galaxy workflow, which includes Iso2flux. 
 
 Advanced usage through docker
 
