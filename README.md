@@ -1,5 +1,5 @@
 # Iso2Flux
-Version: 0.7
+Version: 0.7.1
 
 ## Short Description
 
