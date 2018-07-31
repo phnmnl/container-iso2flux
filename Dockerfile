@@ -10,7 +10,7 @@ LABEL documentation="https://github.com/cfoguet/iso2flux"
 LABEL license="https://github.com/cfoguet/iso2flux"
 LABEL tags="Metabolomics"
 
-ENV ISO2FLUX_REVISION "3b3bdac16970c7b3967bb65199eef6c1173c5602"
+ENV ISO2FLUX_REVISION "aa04f004f6db254e3bd988ac6969f4f4902a0a80"
 
 RUN apt-get -y update && apt-get -y install --no-install-recommends git libglpk-dev \
                       libxml2-dev libxslt1-dev python-dev python-pip pkg-config zlib1g-dev python-tk libssl-dev && \
